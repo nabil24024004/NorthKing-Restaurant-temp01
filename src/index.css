@@ -1,0 +1,127 @@
+:root {
+  --color-bg: #050505;
+  /* Deep Black */
+  --color-bg-secondary: #121212;
+  /* Dark Charcoal */
+  --color-text: #ffffff;
+  --color-text-muted: #b0b0b0;
+  --color-accent: #FFC107;
+  /* Rich Gold/Amber */
+  --color-accent-hover: #FFD54F;
+  --color-overlay: rgba(0, 0, 0, 0.8);
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  --transition-speed: 0.3s;
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-speed);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  background-color: var(--color-accent);
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+.btn:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-accent);
+  color: #000;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 4px;
+}

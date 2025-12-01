@@ -1,0 +1,126 @@
+.hero {
+    height: 100vh;
+    background-image: url('/images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    /* Added spacing from top */
+}
+
+.hero-badge {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: var(--color-accent);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid var(--color-accent);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    animation: fadeInDown 1s ease-out;
+    backdrop-filter: blur(5px);
+}
+
+.hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    animation: fadeInDown 1s ease-out 0.2s backwards;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-title {
+    font-size: 5rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+    animation: fadeInUp 1s ease-out 0.4s backwards;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #f0f0f0;
+    max-width: 600px;
+    animation: fadeInUp 1s ease-out 0.6s backwards;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    animation: fadeInUp 1s ease-out 0.8s backwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .hero-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
