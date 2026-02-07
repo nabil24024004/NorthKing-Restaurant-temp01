@@ -4,30 +4,30 @@ import './SignatureDishes.css';
 const dishes = [
     {
         id: 1,
-        name: 'BBQ Pizza',
+        name: 'Royal Chicken Biryani',
         price: 'Tk 450',
-        desc: 'Grilled chicken, onions, peppers, and BBQ sauce.',
-        image: '/images/gallery1.jpg' // Reusing gallery images for now
+        desc: 'Aromatic basmati rice cooked with tender chicken, saffron, and exotic spices.',
+        image: '/images/biryani.png'
     },
     {
         id: 2,
-        name: 'Special Set Menu',
-        price: 'Tk 350',
-        desc: 'Fried rice, chicken fry, vegetables, and salad.',
-        image: '/images/gallery2.jpg'
+        name: 'Sizzling Beef Steak',
+        price: 'Tk 850',
+        desc: 'Premium cut beef steak served sizzling hot with sautéed vegetables and fries.',
+        image: '/images/steak.png'
     },
     {
         id: 3,
-        name: 'Thai Soup',
-        price: 'Tk 220',
-        desc: 'Authentic thick soup with chicken and prawns.',
-        image: '/images/gallery3.jpg'
+        name: 'Special Thai Soup',
+        price: 'Tk 320',
+        desc: 'A rich and spicy thick soup loaded with prawns, chicken, and lemongrass.',
+        image: '/images/thaisoup.png'
     },
     {
         id: 4,
-        name: 'Garlic Naan',
-        price: 'Tk 60',
-        desc: 'Soft bread topped with garlic butter.',
+        name: 'Butter Garlic Naan',
+        price: 'Tk 80',
+        desc: 'Soft, fluffy oven-baked bread brushed with garlic butter and herbs.',
         image: '/images/hero.jpg'
     }
 ];
