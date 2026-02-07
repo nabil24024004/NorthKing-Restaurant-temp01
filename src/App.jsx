@@ -8,18 +8,28 @@ import Gallery from './components/Gallery';
 import Location from './components/Location';
 import Footer from './components/Footer';
 
+import { CartProvider } from './context/CartContext';
+import CartDrawer from './components/CartDrawer';
+import Reservation from './components/Reservation';
+import Testimonials from './components/Testimonials';
+
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <About />
-      <SignatureDishes />
-      <Services />
-      <Gallery />
-      <Location />
-      <Footer />
-    </div>
+    <CartProvider>
+      <div className="App">
+        <Header />
+        <Hero />
+        <About />
+        <SignatureDishes />
+        <Reservation />
+        <Services />
+        <Gallery />
+        <Testimonials />
+        <Location />
+        <Footer />
+        <CartDrawer />
+      </div>
+    </CartProvider>
   );
 }
 

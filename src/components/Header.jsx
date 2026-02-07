@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { useCart } from '../context/CartContext';
+import { FaBars, FaTimes, FaShoppingCart } from 'react-icons/fa';
 import './Header.css';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const { toggleCart, cartCount } = useCart();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -40,7 +42,13 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                <a href="#contact" className="btn header-btn">Book a Table</a>
+                <div className="header-actions">
+                    <button className="cart-icon-btn" onClick={toggleCart}>
+                        <FaShoppingCart />
+                        {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+                    </button>
+                    <a href="#reservation" className="btn header-btn">Book a Table</a>
+                </div>
 
                 <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
                     {isMobileMenuOpen ? <FaTimes /> : <FaBars />}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useCart } from '../context/CartContext';
 import './SignatureDishes.css';
 
 const dishes = [
@@ -33,6 +34,8 @@ const dishes = [
 ];
 
 const SignatureDishes = () => {
+    const { addToCart } = useCart();
+
     return (
         <section id="menu" className="signature-dishes">
             <div className="container">
@@ -50,7 +53,12 @@ const SignatureDishes = () => {
                             <div className="dish-info">
                                 <h3>{dish.name}</h3>
                                 <p>{dish.desc}</p>
-                                <button className="btn-text">Order Now &rarr;</button>
+                                <button
+                                    className="btn-text"
+                                    onClick={() => addToCart(dish)}
+                                >
+                                    Add to Cart &rarr;
+                                </button>
                             </div>
                         </div>
                     ))}
