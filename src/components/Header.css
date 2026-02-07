@@ -51,12 +51,30 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     opacity: 0.8;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--color-primary);
+    transition: var(--transition);
 }
 
 .nav a:hover,
 .nav a.active {
     color: var(--color-primary);
     opacity: 1;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+    width: 100%;
 }
 
 .header-actions {
