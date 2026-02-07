@@ -48,10 +48,10 @@ const Header = () => {
                         {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
                     </button>
                     <a href="#reservation" className="btn header-btn">Book a Table</a>
-                </div>
-
-                <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
-                    {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+                    
+                    <div className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+                        {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+                    </div>
                 </div>
             </div>
         </header>
